@@ -84,18 +84,19 @@ const app = {
       if (item.id == productId) {
         item.is_enabled = !item.is_enabled;
       };
-        axios.put(`${url}api/${path}/admin/product/${productId}`)
-          .then(res => {
-           if (res.data.success) {
-             this.render();
-           } else {
-             alert(res.data.message);
-           }
-         })
-         .catch(err => {
-           console.log(err);
-          });
+      //   axios.put(`${url}api/${path}/admin/product/${productId}`)
+      //     .then(res => {
+      //      if (res.data.success) {
+      //        this.getData();
+      //      } else {
+      //        alert(res.data.message);
+      //      }
+      //    })
+      //    .catch(err => {
+      //      console.log(err);
+      //     });
       });
+      this.render();
   },
       
   created(){
